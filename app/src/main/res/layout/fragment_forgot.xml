@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ForgotFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/forgotimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="117dp"
+            android:layout_marginEnd="116dp"
+            android:src="@drawable/forgot"
+            app:layout_constraintBottom_toTopOf="@+id/fpass_ID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fpass_ID"
+            android:layout_width="237dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="Forgot Password ?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/resetword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgotimage" />
+
+        <TextView
+            android:id="@+id/resetword"
+            android:layout_width="203dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:text="Let us Reset it now"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/emailreset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fpass_ID" />
+
+        <EditText
+            android:id="@+id/emailreset"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="92dp"
+            android:ems="10"
+            android:hint="ENTER REGISTERED EMAIL ADDRESS"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/resetbutton_ID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resetword" />
+
+        <Button
+            android:id="@+id/resetbutton_ID"
+            android:layout_width="139dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="136dp"
+            android:layout_marginBottom="65dp"
+            android:background="@color/colorPrimary"
+            android:enabled="false"
+            android:text="RESET PASSWORD"
+            android:textColor="#50ffffff"
+            app:layout_constraintBottom_toTopOf="@+id/goback_ID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgot_linear" />
+
+        <TextView
+            android:id="@+id/goback_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; &lt; Go back "
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resetbutton_ID" />
+
+        <LinearLayout
+            android:id="@+id/forgot_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailreset">
+
+            <TextView
+                android:id="@+id/recovery_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:text="Recovery EMail sent successfully! Check your Inbox."
+                android:textColor="@color/coloryellow" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
